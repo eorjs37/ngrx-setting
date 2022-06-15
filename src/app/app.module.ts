@@ -8,6 +8,8 @@ import { UserInfoComponent } from './page/user-info/user-info.component';
 //ngrx
 import { StoreModule } from '@ngrx/store';
 import { userInfoReducer } from "@store/userInfo/userInfo.reducer"
+//ngrx dev-tools
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,11 @@ import { userInfoReducer } from "@store/userInfo/userInfo.reducer"
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({userInfoState: userInfoReducer})
+    StoreModule.forRoot({userInfoState: userInfoReducer}),
+    //dev-tools
+    StoreDevtoolsModule.instrument({
+      maxAge:25
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

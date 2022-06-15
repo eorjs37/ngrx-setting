@@ -1,5 +1,6 @@
 <p>user-info works!</p>
 
 <h1>
-   
+   {{ (userInfoState$ | async)?.age }}
+   {{ (userInfoState$ | async)?.name }}
 </h1>

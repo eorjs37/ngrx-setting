@@ -13,7 +13,6 @@ export class UserInfoComponent implements OnInit {
   constructor(private store:Store<{userInfoState:UserInfoState}>) { }
 
   ngOnInit(): void {
-    console.log(this.store);
     this.userInfoState$ = this.store.select(getUserInfo);
   }
 
