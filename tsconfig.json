@@ -20,6 +20,7 @@
     "paths": {
       "@models/*":["src/app/models/*"],
       "@store/*":["src/app/store/*"],
+      "@page/*" :["src/app/page/*"],
     },
     "module": "es2020",
     "lib": [
